@@ -67,7 +67,7 @@ function Home() {
                   <div className="card h-100 p-3 position-relative" style={{ width: '100%' }}>
                     <img
                       onClick={() => handleShow(item)}
-                      src={`https://orderjoy-backend.onrender.com/${item.img}`}
+                      src={`https://orderjoy-backend.onrender.com/images/${item.img}`}
                       alt={item.name}
                       className="card-img-top"
                       style={{ height: '190px', objectFit: 'cover' }}
