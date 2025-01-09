@@ -20,7 +20,7 @@ function Contactus() {
         }
 
         try {
-            const response = await axios.post('http://localhost:4007/api/testimonial/add', data);
+            const response = await axios.post('https://orderjoy-backend.onrender.com/api/testimonial/add', data);
             console.log(response);
          if(response.status=='200'){
             toast.success('Testimonial submitted successfully')

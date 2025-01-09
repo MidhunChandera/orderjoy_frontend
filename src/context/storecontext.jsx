@@ -7,7 +7,7 @@ const StoreContextProvider = (props) => {
   const [cartitems, setcartitems] = useState({});
   const [foodData, setFoodData] = useState([]);
   const [token, settoken] = useState(null); // Initialize token as null
-  const apiurl = "http://localhost:4007/api/food/list";
+  const apiurl = "https://orderjoy-backend.onrender.com/api/food/list";
 
   // Fetch food data on component mount
   useEffect(() => {
@@ -35,7 +35,7 @@ const StoreContextProvider = (props) => {
   // Load cart data when token is available
   const loadcartdata = async (token) => {
     try {
-      const response = await axios.post('http://localhost:4007/api/cart/get', {}, { headers: { token } });
+      const response = await axios.post('https://orderjoy-backend.onrender.com/api/cart/get', {}, { headers: { token } });
     console.log(response.data);
     setcartitems(response.data)
     // Set cart items from response (ensure it defaults to an empty object if no data)
@@ -52,7 +52,7 @@ const StoreContextProvider = (props) => {
     });
     if (token) {
       try {
-        await axios.post('http://localhost:4007/api/cart/add', { itemid }, { headers: { token } });
+        await axios.post('https://orderjoy-backend.onrender.com/api/cart/add', { itemid }, { headers: { token } });
       } catch (error) {
         console.error("Error adding item to cart:", error);
       }
@@ -70,7 +70,7 @@ const StoreContextProvider = (props) => {
     });
     if (token) {
       try {
-        await axios.post('http://localhost:4007/api/cart/remove', { itemid }, { headers: { token } });
+        await axios.post('https://orderjoy-backend.onrender.com/cart/remove', { itemid }, { headers: { token } });
       } catch (error) {
         console.error("Error removing item from cart:", error);
       }

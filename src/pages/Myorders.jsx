@@ -10,7 +10,7 @@ function Myorders() {
   const fetchUserOrders = async () => {
     try {
       const response = await axios.post(
-        'http://localhost:4007/api/order/userorder',
+        'https://orderjoy-backend.onrender.com/api/order/userorder',
         {},
         { headers: { token } }
       );
@@ -23,7 +23,7 @@ function Myorders() {
     try {
       
       await axios.post(
-        'http://localhost:4007/api/order/cancel',
+        'https://orderjoy-backend.onrender.com/api/order/cancel',
         { orderId },
         { headers: { token } }
       );
@@ -38,7 +38,7 @@ function Myorders() {
   const deleteorder=async(orderId)=>{
     try {
       await axios.post(
-        'http://localhost:4007/api/order/delete',
+        'https://orderjoy-backend.onrender.com/api/order/delete',
         { orderId },
         { headers: { token } }
       );
@@ -76,7 +76,7 @@ console.log(cartitems);
                 <img
                   width="70px"
                   className="rounded me-3"
-                  src={`http://localhost:4007/images/${item.image}`}
+                  src={`https://orderjoy-backend.onrender.com/images/${item.image}`}
                   alt={item.name}
                 />
                 <div>

@@ -22,7 +22,7 @@ function Home() {
   const [show, setShow] = useState(false);
   const [selectedItem, setSelectedItem] = useState(null); // Store selected item for modal
 
-  const apiurl = 'http://localhost:4007/api/food/list';
+  const apiurl = 'https://orderjoy-backend.onrender.com/api/food/list';
 
   useEffect(() => {
     const fetchData = async () => {
@@ -67,7 +67,7 @@ function Home() {
                   <div className="card h-100 p-3 position-relative" style={{ width: '100%' }}>
                     <img
                       onClick={() => handleShow(item)}
-                      src={`http://localhost:4007/images/${item.img}`}
+                      src={`https://orderjoy-backend.onrender.com/${item.img}`}
                       alt={item.name}
                       className="card-img-top"
                       style={{ height: '190px', objectFit: 'cover' }}

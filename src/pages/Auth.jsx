@@ -5,8 +5,8 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Auth = ({ register }) => {
-  const loginurl = "http://localhost:4007/api/user/login";
-  const registerurl = "http://localhost:4007/api/user/register";
+  const loginurl = "https://orderjoy-backend.onrender.com/api/user/login";
+  const registerurl = "https://orderjoy-backend.onrender.com/api/user/register";
   const [userDetails, setUserDetails] = useState({
     username: "",
     email: "",

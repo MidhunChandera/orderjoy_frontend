@@ -14,7 +14,7 @@ function Verify() {
 
   const verifyPayment = async () => {
     try {
-      const response = await axios.post('http://localhost:4007/api/order/verify', { success, orderId });
+      const response = await axios.post('https://orderjoy-backend.onrender.com/api/order/verify', { success, orderId });
 
       console.log('Response:', response.data);
 

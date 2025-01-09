@@ -9,7 +9,7 @@ function Testimonial() {
 
   const getTestimonial = async () => {
     try {
-      const response = await axios.post("http://localhost:4007/api/testimonial/get");
+      const response = await axios.post("https://orderjoy-backend.onrender.com/api/testimonial/get");
       console.log(response)
       if (response.status === 200) {
         const approvedTestimonials = response.data.filter(

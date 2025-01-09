@@ -48,7 +48,7 @@ function Order() {
 
     try {
       let response = await axios.post(
-        "http://localhost:4007/api/order/place",
+        "https://orderjoy-backend.onrender.com/api/order/place",
         orderaddress,
         { headers: { token } }
       );

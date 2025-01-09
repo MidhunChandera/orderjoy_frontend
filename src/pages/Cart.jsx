@@ -65,7 +65,7 @@ function Cart() {
    
                     <div className="d-flex align-items-center">
                       <img
-                        src={`http://localhost:4007/images/${item.img}`}
+                        src={`https://orderjoy-backend.onrender.com/images/${item.img}`}
                         alt={item.name}
                         style={{
                           width: "60px",

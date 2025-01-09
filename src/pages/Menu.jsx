@@ -177,7 +177,7 @@ const paginate=(page)=>setcurrentpage(page)
                 <div className="card h-100 p-3" style={{ width: '100%' }}>
                   <img
                     onClick={() => handleShow(item)} // Show modal when clicked
-                    src={`http://localhost:4007/images/${item.img}`}
+                    src={`https://orderjoy-backend.onrender.com/images/${item.img}`}
                     alt={item.name}
                     className="card-img-top"
                     style={{ height: '150px', objectFit: 'cover' }}
@@ -279,7 +279,7 @@ const paginate=(page)=>setcurrentpage(page)
             </Modal.Header>
             <Modal.Body>
               <img
-                src={`http://localhost:4007/images/${selectedItem.img}`}
+                src={`https://orderjoy-backend.onrender.com/images/${selectedItem.img}`}
                 alt={selectedItem.name}
                 className="img-fluid"
                 style={{ width: '100%', maxHeight: '400px', objectFit: 'contain' }}
