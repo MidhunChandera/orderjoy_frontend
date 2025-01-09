@@ -1,0 +1,298 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 15px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1030;
+}
+
+button {
+  border: none;
+
+  padding: 0;
+
+  background: none;
+ 
+  cursor: pointer;
+
+}
+
+/* Flex layout for the menu */
+nav ul {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li {
+  display: flex;
+  list-style: none;
+  padding: 10px 20px;
+
+}
+
+li.active a {
+
+  border-bottom: 3px solid yellowgreen;
+
+}
+
+.menus {
+  font-size: 16px;
+  display: none;
+  /* Hide the hamburger icon by default */
+}
+
+/* For small screens (max-width: 750px) */
+@media(max-width: 750px) {
+  nav ul {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    display: none;
+    /* Hide the menu by default */
+    transform: translateY(-1000px);
+    /* Initially offscreen */
+    padding: 10px 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    /* Optional: Add shadow for menu */
+    z-index: 1000;
+    /* Ensure menu appears above other content */
+    transition: all 0.3s ease-in-out;
+  }
+
+  .menus {
+    display: block;
+  
+    
+  }
+
+  
+  
+  nav ul.active {
+    display: flex;
+    /* Show the menu */
+    transform: translateY(0);
+    /* Bring the menu into view */
+  }
+
+  .logo img {
+    width: 50px;
+  }
+
+
+  
+  .buttons {
+    display: none;
+
+    
+  }
+}
+
+.headerbtn {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  padding: 10px 20px;
+  font-size: 12px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.modal-backdrop {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.headerbtn:hover {
+  color: rgb(0, 0, 0);
+  background-color: yellowgreen;
+}
+
+.usericon {
+  margin-top: 13px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.buttons {
+  display: flex;
+  gap: 20px;
+}
+
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+
+
+#addtocart {
+
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  font-size: 10px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+
+
+
+}
+
+.fas.fa-shopping-cart {
+  font-size: 1.2em;
+  color: #007bff;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-container {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./assets/hero.jpeg");
+  color: white;
+  min-height: 550px;
+  padding: 3rem 1rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+
+.appstorebtns {
+  display: flex;
+  flex-direction: column;
+
+
+}
+
+.greentxt {
+  color: yellowgreen;
+}
+
+.app-container {
+  background-color: #F8F8FF;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+}
+
+.cart-title {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 0.5fr;
+  color: gray;
+  align-items: center;
+}
+
+.cart-collection {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr 1fr 1fr 0.5fr;
+  color: gray;
+  align-items: center;
+
+}
+
+.cart-collection p {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.order-container {
+
+  background-color: #F8F8FF;
+}
+
+.login-btn {
+  background-color: yellowgreen;
+  color: white;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: white;
+  color: yellowgreen;
+}
+
+.footer {
+
+  width: 100%;
+  bottom: 0;
+  left: 0;
+
+}
+
+#orderinfocontainer {
+  margin-bottom: 220px;
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial {
+  margin: 80px auto;
+  padding: 0 80px;
+  position: relative;
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+}
+
+.card .hover-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.card:hover .hover-overlay {
+  opacity: 1;
+  color: #28a745;
+}
+
+.card .hover-overlay h5,
+.card .hover-overlay p {
+  margin: 0;
+  padding: 0 10px;
+  text-align: center;
+
+}
